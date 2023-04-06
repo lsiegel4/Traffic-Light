@@ -1,0 +1,110 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.traffic-light-problem {
+    text-align: center;
+    background-color: #DDDDDD;
+}
+
+.author {
+    text-align: center;
+    background-color: #DDDDDD;
+}
+
+.description {
+    text-align: center;
+    background-color: #DDDDDD;
+}
+
+.parent-traffic-light {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: aqua;
+}
+
+.parent-traffic-light .traffic-light {
+    width: 110px;
+    height: 310px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #000000;
+    border-radius: 15px;
+    background: linear-gradient(100deg, #555555 50%, #333333 30%);
+}
+
+.parent-traffic-light .traffic-light .red-light {
+    width: 95px;
+    height: 95px;
+    border-radius: 50px;
+    background-color: #000000;
+    box-shadow: 0 0 1px 0 #FFFFFF;
+    position: relative;
+}
+
+.parent-traffic-light .traffic-light .yellow-light {
+    width: 95px;
+    height: 95px;
+    border-radius: 50px;
+    background-color: #000000;
+    box-shadow: 0 0 1px 0 #FFFFFF;
+    position: relative;
+}
+
+.parent-traffic-light .traffic-light .green-light {
+    width: 95px;
+    height: 95px;
+    border-radius: 50px;
+    background-color: #000000;
+    box-shadow: 0 0 1px 0 #FFFFFF;
+    position: relative;
+}
+
+.parent-traffic-light .traffic-light .green-light.green {
+    background-color: #00FF00;
+}
+
+.parent-traffic-light .traffic-light .green-light.green::before {
+    content: none;
+}
+
+.parent-traffic-light .traffic-light .yellow-light.yellow {
+    background-color: #FFFF00;
+}
+
+.parent-traffic-light .traffic-light .yellow-light.yellow::before {
+    content: none;
+}
+
+.parent-traffic-light .traffic-light .red-light.red {
+    background-color: #FF0000;
+}
+
+.parent-traffic-light .traffic-light .red-light.red::before {
+    content: none;
+} 
+
+.parent-traffic-light .parent-button {
+    padding: 10px;
+}
+
+.parent-traffic-light .parent-button .new-light-btn {
+    padding: 5px 10px;
+    border: 1px solid black;
+    background-color: #DDDDDD;
+    cursor: pointer;   
+}
+
+.parent-traffic-light .parent-button .new-light-btn:hover {
+    background-color: #BBBBBB;
+    outline: none;
+}
