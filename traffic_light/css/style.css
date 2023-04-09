@@ -1,8 +1,11 @@
+/* {* references all elements within page} Padding and margin pretty self-explanatory, provides paddign and margin btw elts and edges of display */ 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+
+/* before curly braces: selector, inside are property value pairs. We use "." before the selector to represent that it is a class rather than elt or id */
 
 .traffic-light-problem {
     text-align: center;
@@ -19,6 +22,11 @@
     background-color: #DDDDDD;
 }
 
+/* some elts: display reps how elts are displayed, flex is essentially saying the elts are flexible in relation to each other.
+ Wrapping is whether elts will wrap onto new line or try to fit all together.
+ Justify content and align items are to keep them in the center, aligning on the main and cross axes respectively
+ vw and vh = viewport width and height, done by percentage. */ 
+
 .parent-traffic-light {
     display: flex;
     flex-direction: column;
@@ -29,6 +37,8 @@
     height: 100vh;
     background-color: aqua;
 }
+
+/* combining selectors in order to apply more specific properties to certain subsections */ 
 
 .parent-traffic-light .traffic-light {
     width: 110px;
@@ -41,6 +51,9 @@
     border-radius: 15px;
     background: linear-gradient(100deg, #555555 50%, #333333 30%);
 }
+
+/* giving relative position allows the lights to be located relative to each other rather than fixing them in a set location, 
+ so much easier to add/subtract lights if necessary in the future */
 
 .parent-traffic-light .traffic-light .red-light {
     width: 95px;
@@ -69,9 +82,15 @@
     position: relative;
 }
 
+/* adding cases where lights are 'on', so they become their respective color */ 
+
 .parent-traffic-light .traffic-light .green-light.green {
     background-color: #00FF00;
 }
+
+/* :: indicates psuedo elt.
+ ::before adds psuedo elt that is first child of selected elt. 
+ In this case necessary to prevent light from staying on forever? Not 100% on this just yet */ 
 
 .parent-traffic-light .traffic-light .green-light.green::before {
     content: none;
@@ -97,12 +116,17 @@
     padding: 10px;
 }
 
+/* in this case two values for padding specify width and height in that order.
+ cursor indicates how we want out cursor to look like, in this case just a pointer works. */ 
+
 .parent-traffic-light .parent-button .new-light-btn {
     padding: 5px 10px;
     border: 1px solid black;
     background-color: #DDDDDD;
     cursor: pointer;   
 }
+
+/* : indicates psuedo class, hover for what happens when hover over button */ 
 
 .parent-traffic-light .parent-button .new-light-btn:hover {
     background-color: #BBBBBB;

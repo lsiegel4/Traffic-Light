@@ -1,26 +1,41 @@
+<!-- document type declaration-->
 <!DOCTYPE html>
+<!-- setting language to english-->
 <html lang="en">
+    <!-- title section = <head> -->
     <head>
+        <!-- UTF-8 represents any character in Unicode standard-->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width , initial-scale=1.0">
+        <!-- title is How it wll be displayed on webpage-->
         <title>Traffic Light</title>
+        <!-- provides link to stylesheet that will be styling these html elements (href)-->
         <link rel="stylesheet" type="text/css" href="./css/style.css">
     </head>
+    <!-- body text-->
     <body>
+        <!-- h# is a header, larger (1) to smaller (6) -->
+        <!-- setting classes allow for modification in css stylesheet-->
         <h1 class ="traffic-light-problem">TRAFFIC LIGHT PROBLEM</h1>
         <h2 class ="author">By Lucas Siegel</h2>
         <h5 class ="description">Press "New Light" to activate a randomly chosen light from the traffic light. As well, the light should not be the same as the previous light.</h5>
+        <!-- hr gives a line break -->
         <hr>
+        <!-- div is a meaningless element, basically used to declare classes that will be styled using css -->
+        <!-- Each div elt is on a separate "line"-->
         <div class="parent-traffic-light">
+            <!-- Can make subclasses as seen below - each of red, yellow, green light is a child of traffic light etc-->
             <div class="traffic-light">
                 <div class="red-light"></div>
                 <div class="yellow-light"></div>
                 <div class="green-light"></div>
             </div>
             <div class="parent-button">
+                <!-- creating a button that can then be styled in css -->
                 <button type="button" class="new-light-btn">New Light</button>
             </div>
         </div>
+        <!-- adds a scripting element, similar to the linking element which references css stylesheet, but in this case we are scripting only in the body, so not needed in <head> (title) elt -->
         <script type="text/javascript" src="./js/script.js"></script>
     </body>
 </html>
