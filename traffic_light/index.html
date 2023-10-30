@@ -22,7 +22,7 @@
         <!-- hr gives a line break -->
         <hr>
         <!-- div is a meaningless element, basically used to declare classes that will be styled using css -->
-        <!-- Each div elt is on a separate "line"-->
+        <!-- Each div elt is on a separate "line", not always the best to use because they have no meaning-->
         <div class="parent-traffic-light">
             <!-- Can make subclasses as seen below - each of red, yellow, green light is a child of traffic light etc-->
             <div class="traffic-light">
@@ -35,7 +35,9 @@
                 <button type="button" class="new-light-btn">New Light</button>
             </div>
         </div>
-        <!-- adds a scripting element, similar to the linking element which references css stylesheet, but in this case we are scripting only in the body, so not needed in <head> (title) elt -->
+        <!-- adds a scripting element, similar to the linking element which references css stylesheet,
+             but in this case we are scripting only in the body, so not needed in <head> (title) elt.
+             Furthermore, putting this right at the end improves site performance and gives a better experience. -->
         <script type="text/javascript" src="./js/script.js"></script>
     </body>
 </html>
